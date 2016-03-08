@@ -22,14 +22,20 @@ body, a:link, a:visited, a:active{
 }
 
 
-.trump_floor{
-  color: white;
-  border:20px solid black;
-  border-radius: 5px;
+.trump_floor, .trump_wall{
+  border:10px solid red;
+  border-radius:10px;
+  position:absolute;
 }
 
-.trump_wall{
-  color: red;
-  border:20px solid red;
-  border-radius: 5px;
+.trump_floor {
+  border: 10px solid blue;
 }
+
+/*.trump_floor, .trump_wall {
+
+  border:10px solid red;
+  border-radius:10px;
+  
+
+}*/

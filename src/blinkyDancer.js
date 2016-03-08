@@ -21,10 +21,12 @@ makeBlinkyDancer.prototype.step = function() {
 // Walldancer subclass
 
 var Walldancer = function(top, left, timeBetweenSteps) {
-
+  this.$node = $('<span class="trump_wall"></span>');
   makeDancer.call(this, top, left, timeBetweenSteps);
   console.log(top);
-  this.$node = $('<span class="trump_wall"></span>');
+  console.log(left);
+
+
 };
 
 Walldancer.prototype = Object.create(makeDancer.prototype);
@@ -35,9 +37,9 @@ Walldancer.prototype.step = function() {
 
 // Floordancer subclass
 var Floordancer = function(top, left, timeBetweenSteps) {
+  this.$node = $('<span class="trump_floor"></span>');
 
   makeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node = $('<span class="trump_floor"></span>');
   
 };
 
