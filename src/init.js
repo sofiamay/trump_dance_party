@@ -41,8 +41,9 @@ $(document).ready(function() {
   });
 });
 
-$('.lineup').on('click', function(event) {
-  var left = 700;
+$('.lineup').on('click', function(event, pos) {
+  //initial values for lineup
+  var left = 500;
   var top = 700;
   //function called when user clicks on a dancer to make him jump
   var jump = function() {
@@ -51,8 +52,9 @@ $('.lineup').on('click', function(event) {
       'top': '800px'
     }, 1000);
     $(this).animate({
-      'top': '200px'
+      'top': '20px'
     });
+
     $(this).unbind();
   };
   var lineup = function(dancers) {
@@ -71,8 +73,8 @@ $('.lineup').on('click', function(event) {
   };
   //lineup dancers
   if (walldancers.length > 0 || floordancers.length > 0) {
-    lineup(walldancers);
-    lineup(floordancers);
+    var alldancers = walldancers.concat(floordancers);
+    lineup(alldancers);
 
     //show message: "click dancers to make them jump!"
     $message = $('<div class="jump-message">Click on Trump to make him jump!</div>') 

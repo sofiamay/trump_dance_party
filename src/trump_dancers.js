@@ -52,7 +52,7 @@ Walldancer.prototype.step = function() {
 
 // Floordancer subclass
 var Floordancer = function(top, left, timeBetweenSteps) {
-  this.$node = $('<span class="trump_floor"></span>');
+  this.$node = $('<img src="media/greendancetrump.gif" class="trump_floor resize"></span>');
 
   makeDancer.call(this, top, left, timeBetweenSteps);
   
