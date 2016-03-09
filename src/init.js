@@ -15,7 +15,7 @@ $(document).ready(function() {
 
     // make a dancer with a random position
     var dancer = new dancerMakerFunction(
-      100,
+      20,
       100,
       Math.random() * 1000
     );
@@ -70,12 +70,14 @@ $('.lineup').on('click', function(event) {
     }
   };
   //lineup dancers
-  lineup(walldancers);
-  lineup(floordancers);
+  if (walldancers.length > 0 || floordancers.length > 0) {
+    lineup(walldancers);
+    lineup(floordancers);
 
-  //show message: "click dancers to make them jump!"
-  $message = $('<div class="jump-message">Click on Trump to make him jump!</div>') 
-  $('body').append($message);
+    //show message: "click dancers to make them jump!"
+    $message = $('<div class="jump-message">Click on Trump to make him jump!</div>') 
+    $('body').append($message);
+  }
 
     
   });

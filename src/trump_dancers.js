@@ -21,7 +21,7 @@ makeBlinkyDancer.prototype.step = function() {
 // Walldancer subclass
 
 var Walldancer = function(top, left, timeBetweenSteps) {
-  this.$node = $('<span class="trump_wall"></span>');
+  this.$node = $('<img src="media/trumpbody.gif" class="trump_wall"></span>');
   makeDancer.call(this, top, left, timeBetweenSteps);
 };
 
@@ -31,7 +31,7 @@ Walldancer.prototype.stepBack = function () {
   var dancer = this;
   this.$node.animate({
     'left': '100px',
-    'top': '100px'
+    'top': '20px'
   },
   {
     duration: 5000,
@@ -42,7 +42,7 @@ Walldancer.prototype.step = function() {
   var dancer = this;
   this.$node.animate({
     'left': '1500px',
-    'top': '375px'
+    'top': '300px'
   },
   {
     duration: 5000,

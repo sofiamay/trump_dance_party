@@ -9,9 +9,9 @@ body{
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton{
+.title, .add-dancer{
   padding:5px 12px;
-  float:right;
+  margin: auto;
 }
 .topbar{
   height:32px;
@@ -23,13 +23,17 @@ body, a:link, a:visited, a:active{
 
 
 .trump_floor, .trump_wall{
-  border:10px solid red;
-  border-radius:10px;
+/*  border:10px solid red;
+  border-radius:10px;*/
   position:absolute;
 }
 
 .trump_floor {
   border: 10px solid blue;
+}
+
+.trump_wall {
+  background-image: url('media/trumpbody.gif')
 }
 
 .jump-message {
@@ -46,7 +50,6 @@ body, a:link, a:visited, a:active{
   border-radius:4px;
   border:1px solid #ffffff;
   display:inline-block;
-  cursor:pointer;
   color:#ffffff;
   font-family:Arial;
   font-size:15px;
@@ -55,11 +58,9 @@ body, a:link, a:visited, a:active{
   text-shadow:0px 1px 0px #b23e35;
 }
 
-.add-dancer {
-  
+.dancer-buttons {
+ text-align: center;
 }
-
-
 
 
 
